@@ -13,19 +13,64 @@
     box-sizing: border-box;
     font-family: 'Space Grotesk', sans-serif;
 }
-body {
+.body {
     -webkit-font-smoothing: subpixel-antialiased !important;
     -webkit-text-stroke: 1px transparent;
+    /*background-image: url("Images/blurry-gradient-haikei.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+     */
     height: 100vh;
     overflow: hidden;
     display: grid;
     place-items: center;
+}
+::selection {
+    color: white;
 }
 .wrapperOverflow {
     overflow-x: hidden;
 }
 .font2 {
    font-family: "Miratrix", sans-serif;
+}
+@media (max-width: 600px) {
+    #text:has(.fancy) .word:not(.fancy) {
+        opacity: 0.2;
+    }
+    .fancy span {
+        display: inline-block;
+        text-decoration: underline;
+    }
+    .fancy > .outer {
+        transition: transform 350ms ease;
+    }
+    .fancy > .outer {
+        transition-duration: 800ms;
+    }
+    .fancy > .outer > .inner {
+        animation: float 5s ease infinite;
+    }
+    .fancy > .outer:nth-child(1) {
+        transform: translate(-80%, 60%) rotate(8deg);
+    }
+    .fancy > .outer:nth-child(2) {
+        transform: translate(-40%, 20%) rotate(4deg);
+    }
+    .fancy > .outer:nth-child(3) {
+        transform: translate(-10%, 60%) rotate(-6deg);
+    }
+    .fancy > .outer:nth-child(4) {
+        transform: translate(0%, 8%) rotate(-8deg);
+    }
+    .fancy > .outer:nth-child(5) {
+        transform: translate(0%, -20%) rotate(5deg);
+    }
+}
+@media (prefers-reduced-motion) {   /* For Users that don't want animations on */
+    .hidden {
+        transition: none;
+    }
 }
 @keyframes float {
     from, to {
@@ -42,7 +87,7 @@ body {
     }
 
     to {
-        background-position: 0% center;
+        background-position: 0 center;
     }
 }
 .line {
@@ -75,21 +120,26 @@ body {
 }
 .fancy:hover > .outer:nth-child(1) {
     transform: translate(-80%, 60%) rotate(8deg);
-    text-decoration: none !important;
 }
 .fancy:hover > .outer:nth-child(2) {
     transform: translate(-40%, 20%) rotate(4deg);
-    text-decoration: none !important;;
 }
 .fancy:hover > .outer:nth-child(3) {
     transform: translate(-10%, 60%) rotate(-6deg);
-    text-decoration: none !important;;
 }
 .fancy:hover > .outer:nth-child(4) {
     transform: translate(0%, 8%) rotate(-8deg);
-    text-decoration: none !important;;
 }
 .fancy:hover > .outer:nth-child(5) {
     transform: translate(0%, -20%) rotate(5deg);
-    text-decoration: none !important;;
 }
+/*
+.hidden {
+    opacity: 0;
+    transform: translateX(+100%);
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+ */
