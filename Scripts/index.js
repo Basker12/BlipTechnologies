@@ -1,13 +1,3 @@
-/*
-window.addEventListener('DOMContentLoaded', (event) => {
-    const txt = document.querySelector('.hidden');
-    let time = 2000;
-    setTimeout(() => {
-        txt.classList.replace('hidden','visible');
-        txt.style.transition = "all 0.5s";
-    }, time)
-});
-*/
 const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const enhance = id => {

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slate</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="Scripts/pageAnims.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accentPurple: '#9400d3',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+    <!--<link rel="manifest" href="Favicon/site.webmanifest">                             Undo this comment when it goes for production  -->
+    <link rel="mask-icon" href="Favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Icon -->
+</head>
+<body class="overflow-hidden">
+<div>
+
+    <div class="fixed bottom-6 right-7 z-10">
+        <button class="px-4 py-1 border uppercase font-semibold bg-white hover:bg-accentPurple hover:text-white transition duration-400 ease-in-out" onclick="toggleStart();">Play</button>
+        <button class="px-4 py-1 border uppercase font-semibold bg-white hover:bg-accentPurple hover:text-white transition duration-400 ease-in-out" onclick="toggleStop();">Pause</button>
+    </div>
+
+    <div data-animations class="left w-full h-auto select-none" style="white-space: nowrap;">
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+    </div>
+    <div data-animations class="right w-full h-auto space-x-6 select-none" style="white-space: nowrap;">
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+    </div>
+    <div data-animations class="left w-full h-auto select-none" style="white-space: nowrap;">
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+    </div>
+    <div data-animations class="right2 w-full h-auto space-x-6 select-none" style="white-space: nowrap;">
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+    </div>
+    <div data-animations class="left w-full h-auto select-none" style="white-space: nowrap;">
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+    </div>
+    <div data-animations class="right3 w-full h-auto space-x-6 select-none" style="white-space: nowrap;">
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+    </div>
+    <div data-animations class="left w-full h-auto select-none" style="white-space: nowrap;">
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+        <span class="font2 text-9xl">Slate</span>
+    </div>
+    <div data-animations class="right4 w-full h-auto space-x-6 select-none" style="white-space: nowrap;">
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+        <span class="font2 text-9xl text-gray-300">Slate</span>
+    </div>
+</div>
+</body>
+</html>
