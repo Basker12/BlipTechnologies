@@ -6,8 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Slate</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dist/output.css" />
     <script src="Scripts/pageAnims.js" defer></script>
+    <!--
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -20,6 +21,7 @@
             }
         }
     </script>
+    -->
 
     <!-- Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
@@ -31,14 +33,38 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Icon -->
 </head>
-<body class="overflow-hidden">
+<body class="body">
 <div>
 
     <div class="fixed bottom-6 right-7 z-10">
-        <button class="px-4 py-1 border uppercase font-semibold bg-white hover:bg-accentPurple hover:text-white transition duration-400 ease-in-out" onclick="toggleStart();">Play</button>
-        <button class="px-4 py-1 border uppercase font-semibold bg-white hover:bg-accentPurple hover:text-white transition duration-400 ease-in-out" onclick="toggleStop();">Pause</button>
+        <button class="headerFont px-4 py-1 border uppercase font-semibold bg-white hover:bg-accentPurple hover:text-white transition duration-400 ease-in-out" id="play">Play</button>
+        <button class="px-4 py-1 border uppercase font-semibold bg-white hover:bg-accentPurple hover:text-white transition duration-400 ease-in-out" id="pause">Pause</button>
     </div>
 
+    <div class="centerFixed z-10">
+        <div class="">
+            <div class="glider">
+                <div> 1 </div>
+                <div> 2 </div>
+                <div> 3 </div>
+                <div> 4 </div>
+                <div> 5 </div>
+                <div> 6 </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <section class="centerAbsolute z-10 text-center max-w-6xl py-20 px-5 mx-auto leading-6">
+            <div class="flex justify-center flex-col p-6 bg-white rounded-xl drop-shadow-md">
+                <div class="flex justify-center">
+                    <img src="Images/slateLogoBlack.svg" alt="Slate Logo" style="width: 200px; height: 200px;" />
+                </div>
+                <h2 class="headerFont text-2xl font-semibold mb-4 text-accentPurple">Slate</h2>
+                <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquam amet architecto, atque, cum deleniti dicta eligendi id impedit ipsa iure magni, recusandae repudiandae voluptatum. Alias dolorum perferendis tempora.</p>
+            </div>
+    </section>
+    -->
     <div data-animations class="left w-full h-auto select-none" style="white-space: nowrap;">
         <span class="font2 text-9xl">Slate</span>
         <span class="font2 text-9xl">Slate</span>

@@ -1,26 +1,14 @@
-let playerToggle = false;
+let play = document.querySelector('#play');
+let pause = document.querySelector('#pause');
+let animDivs = document.querySelectorAll('[data-animations]');
 
-function toggleStop() {
-    if (playerToggle === false) {
-        stopAnim();
-    }
-}
-function toggleStart () {
-    if (playerToggle === false) {
-        startAnim();
-        console.log("Should be working")
-    }
-}
-
-function stopAnim () {
-    let anim = document.querySelectorAll('[data-animations]');
-    anim.forEach(animation => {
-        animation.classList.add('paused');
+play.addEventListener('click', () => {
+    animDivs.forEach(animation => {
+        animation.style.animationPlayState = "running";
     });
-}
-function startAnim () {
-    let anim = document.querySelectorAll('[data-animations]');
-    anim.forEach(animation => {
-        animation.classList.remove('paused', 'running');
+});
+pause.addEventListener('click', () => {
+    animDivs.forEach(animation => {
+        animation.style.animationPlayState = "paused";
     });
-}
+});

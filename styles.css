@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @font-face {
     font-family: "Miratrix";
-    src: url("fonts/Miratrix-Normal.otf");
+    src: url("../fonts/Miratrix-Normal.otf");
 }
 :root {
     --accentPurple: #9400d3;
@@ -22,7 +25,7 @@
     place-items: center;
 }
 ::selection {
-    color: white;
+    color: var(--accentPurple);
 }
 .wrapperOverflow {
     overflow-x: hidden;
@@ -187,15 +190,23 @@
 .fancy:hover > .outer:nth-child(5) {
     transform: translate(0%, -20%) rotate(5deg);
 }
-.paused {
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    -o-animation-play-state: paused;
-    animation-play-state: paused;
+.centerFixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.running {
-    -webkit-animation-play-state: running;
-    -moz-animation-play-state: running;
-    -o-animation-play-state: running;
-    animation-play-state: running;
+.container2 {
+    display: flex;
+    overflow-x: scroll;
+    width: 350px;
+    padding: 12px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 12px;
+    gap: 2rem;
+}
+.container2 .item {
+    flex: 0 0 100%;
+    padding: 12px;
+    scroll-snap-align: start;
 }
