@@ -9,6 +9,12 @@
 :root {
     --accentPurple: #9400d3;
 }
+html, body {
+    @apply overflow-hidden;
+}
+@font-face {
+    font-family: 'Space Grotesk', sans-serif;
+}
 * {
     scroll-behavior: smooth;
     padding: 0;
@@ -153,7 +159,7 @@
 }
 .word, span {
     color: black;
-    font-size: clamp(2rem, 8vw, 10rem);
+    font-size: clamp(2rem, 8vw, 7.5rem);
     font-family: "Miratrix", sans-serif;
     margin: 0;
     text-transform: uppercase;
@@ -190,23 +196,32 @@
 .fancy:hover > .outer:nth-child(5) {
     transform: translate(0%, -20%) rotate(5deg);
 }
-.centerFixed {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.dot {
+    border-radius: 10rem;
+    border: solid 2px var(--accentPurple);
+    cursor: pointer;
+    height: 15px;
+    width: 35px;
+    margin: 0 2px;
+    background-color: transparent;
+    display: inline-block;
+    transition: background-color 0.2783s ease-in-out;
 }
-.container2 {
-    display: flex;
-    overflow-x: scroll;
-    width: 350px;
-    padding: 12px;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 12px;
-    gap: 2rem;
+.active, .dot:hover {
+    background-color: var(--accentPurple);
 }
-.container2 .item {
-    flex: 0 0 100%;
-    padding: 12px;
-    scroll-snap-align: start;
+.fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+    transition: all 0.5s ease-in;
+}
+@keyframes fade {
+    from {
+        opacity: .4;
+        transform: translateX(-25%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
