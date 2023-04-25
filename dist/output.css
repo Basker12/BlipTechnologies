@@ -689,6 +689,11 @@ video {
   line-height: 1;
 }
 
+.text-6xl{
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .font-normal{
   font-weight: 400;
 }
